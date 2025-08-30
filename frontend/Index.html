@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="game-container">
+
+    <header class="game-header">
+      <div class="game-title">ROCK<br />PAPER<br />SCISSORS</div>
+      <div class="score-board">
+        <div class="score-box">
+          <span class="score-label">COMPUTER<br />SCORE</span>
+          <span id="computer-score" class="score-value">0</span>
+        </div>
+        <div class="score-box">
+          <span class="score-label">YOUR<br />SCORE</span>
+          <span id="your-score" class="score-value">0</span>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="game-main">
+
+      <div class="options-layout" id="game-options">
+        <svg class="connecting-lines" width="300" height="260" viewBox="0 0 300 260" fill="none">
+          <line x1="60" y1="60" x2="240" y2="60" stroke="#333" stroke-width="10" stroke-linecap="round" />
+          <line x1="60" y1="60" x2="150" y2="200" stroke="#333" stroke-width="10" stroke-linecap="round" />
+          <line x1="240" y1="60" x2="150" y2="200" stroke="#333" stroke-width="10" stroke-linecap="round" />
+        </svg>
+        <div class="option-circle option-rock" data-choice="rock">
+          <img src="assets/rock-svg.svg" alt="Rock" class="hand-emoji" />
+        </div>
+        <div class="option-circle option-scissors" data-choice="scissors">
+          <img src="assets/scissor.svg" alt="Scissors" class="hand-emoji" />
+        </div>
+        <div class="option-circle option-paper" data-choice="paper">
+          <img src="assets/paper.svg" alt="Paper" class="hand-emoji" />
+        </div>
+      </div>
+
+
+      <div class="result-display hidden" id="game-result">
+        <div class="player-picked">
+          <span class="picked-label">YOU PICKED</span>
+          <div class="result-circle your-choice">
+
+            <img src="" alt="" class="chosen-emoji" />
+          </div>
+        </div>
+        <div class="result-message-container">
+          <div class="result-text">
+            <div class="win-main" aria-live="polite"></div>
+            <div class="win-sub"></div>
+          </div>
+          <button class="play-again-button" id="play-again-button">PLAY AGAIN</button>
+        </div>
+
+        <div class="computer-picked">
+          <span class="picked-label">PC PICKED</span>
+          <div class="result-circle computer-choice">
+            <img src="" alt="" class="chosen-emoji" />
+          </div>
+        </div>
+      </div>
+      <div class="hurray-page hidden" id="hurray-page">
+        <div class="trophy-container">
+          <img src="assets/Vector.png" alt="Trophy" class="trophy-img" />
+
+          <span class="star star-1"></span>
+          <span class="star star-2"></span>
+          <span class="star star-3"></span>
+          <span class="star star-4"></span>
+          <span class="star star-5"></span>
+          <span class="star star-6"></span>
+
+        </div>
+
+
+        <p class="hurray-text">H U R R A Y!!</p>
+        <p class="hurray-subtext">YOU WON THE GAME</p>
+        <button class="play-again-button" id="play-again-from-hurray">PLAY AGAIN</button>
+      </div>
+
+    </main>
+
+
+    <div class="action-buttons-container">
+      <button class="rules-button" id="rules-button">RULES</button>
+      <button class="next-button hidden" id="next-button">NEXT</button>
+    </div>
+
+
+    <div class="rules-dialog hidden" id="rules-dialog">
+      <div class="rules-header">
+        <h3>Game Rules</h3>
+        <button class="close-rules-button" id="close-rules-button">X</button>
+      </div>
+      <ul class="rules-list">
+        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”
+        </li>
+        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+        <li>If both players lay down the same hand, each player lays down another hand.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

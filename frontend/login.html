@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Log In</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h2>Log In</h2>
+      <form id="login-form">
+        <label for="login-username">Email</label>
+        <input type="text" id="login-username" placeholder="Enter your email">
+
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" placeholder="Enter your password">
+
+        <button type="button" onclick="loginUser()">Log In</button>
+      </form>
+
+      <p class="register-text">
+        Don’t have an account? <a href="#" onclick="showRegister()">Register</a>
+      </p>
+      <p id="auth-message"></p>
+    </div>
+  </div>
+
+  <!-- Hidden Register Box -->
+  <div class="container" id="register-container" style="display:none;">
+    <div class="login-box">
+      <h2>Register</h2>
+      <form id="register-form">
+        <label for="reg-username">Email</label>
+        <input type="text" id="reg-username" placeholder="Enter your email">
+
+        <label for="reg-password">Password</label>
+        <input type="password" id="reg-password" placeholder="Create a password">
+
+        <button type="button" onclick="registerUser()">Register</button>
+      </form>
+
+      <p class="register-text">
+        Already have an account? <a href="#" onclick="showLogin()">Log In</a>
+      </p>
+      <p id="auth-message-register"></p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
+
+
+
+
+
