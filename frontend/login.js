@@ -47,11 +47,12 @@ async function loginUser() {
 
         if (res.ok) {
             localStorage.setItem("token", data.token);
+            localStorage.setItem("loggedIn", "true");
             document.getElementById("auth-message").style.color = "green";
             document.getElementById("auth-message").textContent = "Login Successful ✅";
 
             setTimeout(() => {
-                window.location.href = "index.html";  
+                window.location.href = "index.html";
             }, 1000);
 
         } else {
