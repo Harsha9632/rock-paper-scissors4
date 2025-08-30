@@ -12,18 +12,18 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET;
 
-// Load users from users.json
+
 let users = [];
 if (fs.existsSync('users.json')) {
   users = JSON.parse(fs.readFileSync('users.json'));
 }
 
-// Save users to file
+
 function saveUsers() {
   fs.writeFileSync('users.json', JSON.stringify(users, null, 2));
 }
 
-// ✅ Register API
+
 app.post('/register', async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
@@ -43,7 +43,7 @@ app.post('/register', async (req, res) => {
   res.json({ message: "User registered successfully" });
 });
 
-// ✅ Login API
+
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
   const user = users.find(u => u.username === username);
@@ -57,7 +57,7 @@ app.post('/login', async (req, res) => {
   res.json({ message: "Login successful", token });
 });
 
-// ✅ Protected Route (example)
+
 app.get('/profile', (req, res) => {
   const token = req.headers['authorization'];
   if (!token) return res.status(403).json({ message: "No token provided" });
