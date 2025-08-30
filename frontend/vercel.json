@@ -3,6 +3,10 @@
     { "source": "/", "destination": "/login.html" },
     { "source": "/index", "destination": "/index.html" },
     { "source": "/index.html", "destination": "/index.html" }
-  ]
+  ],
+  "static": {
+    "public": "./"
+  }
 }
+
 
