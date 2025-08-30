@@ -1,18 +1,18 @@
 const API_URL = "http://localhost:5000";
 
-// Show Register Page
+
 function showRegister() {
     document.querySelector(".container").style.display = "none";
     document.getElementById("register-container").style.display = "flex";
 }
 
-// Show Login Page
+
 function showLogin() {
     document.getElementById("register-container").style.display = "none";
     document.querySelector(".container").style.display = "flex";
 }
 
-// Register User
+
 async function registerUser() {
     const username = document.getElementById("reg-username").value;
     const password = document.getElementById("reg-password").value;
@@ -31,7 +31,7 @@ async function registerUser() {
     }
 }
 
-// Login User
+
 async function loginUser() {
     const username = document.getElementById("login-username").value;
     const password = document.getElementById("login-password").value;
