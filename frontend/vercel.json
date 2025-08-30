@@ -3,10 +3,10 @@
     { "source": "/", "destination": "/login.html" }
   ],
   "redirects": [
-    { "source": "/index", "destination": "/index.html", "permanent": false },
-    { "source": "/index.html", "destination": "/index.html", "permanent": false }
+    { "source": "/index", "destination": "/index.html", "permanent": false }
   ]
 }
+
 
 
 
