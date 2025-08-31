@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://rock-paper-scissors-backend-a054.onrender.com";
+
 
 
 function showRegister() {
